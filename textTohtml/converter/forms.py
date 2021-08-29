@@ -4,7 +4,7 @@ from ckeditor.widgets import CKEditorWidget
 from django import forms
 
 class TextForm(forms.ModelForm):
-        body = forms.CharField(widget=CKEditorWidget(),label="Text Editor",required=False)
+        body = forms.CharField(widget=CKEditorWidget(),label="Text Customiser",required=False)
         class Meta:
             model = Text
             fields = '__all__'

@@ -1,24 +1,41 @@
-<script> 
-    function TextConvert() {
-        var x = CKEDITOR.instances['id_body'].getData();
-        var y = document.getElementById('htmldata');
-        y.innerHTML = x;
-      }
 
+  <!-- ++++++++++++++++++++ boostrap cdn ++++++++++++++++++++++++ -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+  <!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<div class="container-fluid "> 
+    <div class="row">
+    
+        <div class="texteditor">
+          {{form.media}}
+          {{form.as_p}}
+      
+       
+      </div >
+      <div style="height: 200px;  ">  
+      <button type="submit" class="btn btn-danger ml-16" style="height: 40px; margin-top:200px; margin-left: 25px; "  onclick="TextConvert()">
+        ToHtml->
+      </button>
+      </div>
+          <div class="mt-5 ml-4" style="width:900px;">
+            <textarea class="form-control " rows="14.5" id='htmldata'>
+                    </textarea>
+      </div>
+    </div>
+   
+    <div > 
+ 
+  </div>
+  </div>
+
+</html>
+<script>
+  function TextConvert() {
+    var x = CKEDITOR.instances['id_body'].getData();
+    var y = document.getElementById('htmldata');
+    y.innerHTML = x;
+  }
 </script>
 
-<form  >
-    {% csrf_token %}
-    {{form.media}}
-    {{form.as_p}}
-   
-</form>   
- <button type="submit" onclick="TextConvert()"> html </button>
-
-<div class="form-group">
-  <textarea class="form-control " rows="18" style="width : 900px;" id='htmldata'>
-                    </textarea>
-  
-
-</div>
