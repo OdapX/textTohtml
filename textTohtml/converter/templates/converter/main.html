@@ -1,0 +1,24 @@
+<script> 
+    function TextConvert() {
+        var x = CKEDITOR.instances['id_body'].getData();
+        var y = document.getElementById('htmldata');
+        y.innerHTML = x;
+      }
+
+
+</script>
+
+<form  >
+    {% csrf_token %}
+    {{form.media}}
+    {{form.as_p}}
+   
+</form>   
+ <button type="submit" onclick="TextConvert()"> html </button>
+
+<div class="form-group">
+  <textarea class="form-control " rows="18" style="width : 900px;" id='htmldata'>
+                    </textarea>
+  
+
+</div>
