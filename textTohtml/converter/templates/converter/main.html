@@ -7,7 +7,7 @@
 
 <div class="container-fluid "> 
     <div class="row">
-    
+       
         <div class="texteditor">
           {{form.media}}
           {{form.as_p}}
@@ -20,7 +20,8 @@
       </button>
       </div>
           <div class="mt-5 ml-4" style="width:900px;">
-            <textarea class="form-control " rows="14.5" id='htmldata'>
+            <label>HTML preview </label>
+            <textarea class="form-control " rows="14.5" id='htmldata' >
                     </textarea>
       </div>
     </div>
@@ -30,7 +31,7 @@
   </div>
   </div>
 
-</html>
+
 <script>
   function TextConvert() {
     var x = CKEDITOR.instances['id_body'].getData();
